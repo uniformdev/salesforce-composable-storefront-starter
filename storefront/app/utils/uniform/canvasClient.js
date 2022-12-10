@@ -20,7 +20,10 @@ export async function getCompositionBySlug(slug, preview) {
     })
     const {composition} = await canvasClient.getCompositionBySlug({
         slug,
-        state: preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE
+        state:
+            process.env.NODE_ENV === 'development' || preview
+                ? CANVAS_DRAFT_STATE
+                : CANVAS_PUBLISHED_STATE
     })
     return composition
 }
