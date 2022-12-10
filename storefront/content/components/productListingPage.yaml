@@ -1,0 +1,47 @@
+id: productListingPage
+name: Product Listing Page
+icon: view-list
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: top
+    name: Top
+    allowedComponents:
+      - plpHeader
+      - callToAction
+    inheritAllowedComponents: false
+  - id: sidebar
+    name: Sidebar
+    allowedComponents:
+      - plpRefinements
+    inheritAllowedComponents: false
+  - id: main
+    name: Main
+    allowedComponents:
+      - plpListing
+      - plpFooter
+    inheritAllowedComponents: false
+  - id: emptySearchResults
+    name: Empty Search Results
+    allowedComponents:
+      - plpNoResults
+    inheritAllowedComponents: false
+  - id: refinementsModal
+    name: Refinements Modal
+    allowedComponents:
+      - plpRefinements
+    inheritAllowedComponents: false
+  - id: editorial
+    name: Editorial
+    allowedComponents:
+      - callToAction
+      - features
+    inheritAllowedComponents: false
+slugSettings:
+  unique: 'no'
+  required: 'yes'
+  regularExpression: ''
+  regularExpressionMessage: ''
+canBeComposition: true
+created: '2022-10-21T00:33:17.091213+00:00'
+updated: '2022-11-16T17:39:29.871134+00:00'

@@ -1,0 +1,42 @@
+id: feature
+name: Feature
+icon: bulb
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: '4'
+  - id: icon
+    name: Icon
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Basket
+          value: Basket
+        - text: Like
+          value: Like
+        - text: Account
+          value: Account
+        - text: Plug
+          value: Plug
+        - text: Dashboard
+          value: Dashboard
+        - text: Heart
+          value: Heart
+      required: true
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2022-10-21T00:33:14.75954+00:00'
+updated: '2022-11-16T11:54:15.046392+00:00'

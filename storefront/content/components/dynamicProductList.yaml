@@ -1,0 +1,22 @@
+id: dynamicProductList
+name: Dynamic Product List
+icon: list
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+      multiline: false
+  - id: products
+    name: Products
+    type: salesforce-cc-product-query
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2022-10-21T00:33:15.213824+00:00'
+updated: '2022-11-16T11:54:15.037862+00:00'

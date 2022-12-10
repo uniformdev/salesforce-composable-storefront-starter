@@ -1,0 +1,372 @@
+composition:
+  _name: Header Navigation
+  _id: a01f5d41-9b23-4a8a-b225-b20dc59d73fa
+  _slug: /header-nav
+  type: megaNav
+  parameters: {}
+  slots:
+    groups:
+      - _id: 9f66c99c-14eb-4444-8286-ce994e0941c1
+        type: navGroupSimple
+        slots:
+          sections:
+            - _id: 50931141-102f-498a-8a00-a1fc495c9a2d
+              type: navSectionSimple
+              parameters:
+                slug:
+                  type: text
+                  value: newarrivals-womens
+                title:
+                  type: text
+                  value: Womens
+            - _id: 7c40abf2-d956-4532-afd6-2aab4c6e0ff2
+              type: navSectionSimple
+              parameters:
+                slug:
+                  type: text
+                  value: newarrivals-mens
+                title:
+                  type: text
+                  value: Mens
+            - _id: 034e8bc3-213d-4287-a905-f3093b3ae667
+              type: navSectionSimple
+              parameters:
+                slug:
+                  type: text
+                  value: newarrivals-electronics
+                title:
+                  type: text
+                  value: Electronics
+        parameters:
+          slug:
+            type: text
+            value: newarrivals
+          title:
+            type: text
+            value: New Arrivals
+      - _id: f742b166-32bd-47b8-afd8-1cd1a8af7971
+        type: navGroupSimple
+        slots:
+          sections:
+            - _id: 7fc20b0e-1bdb-43c0-9d69-0a0fcfe436fa
+              type: navSectionSimple
+              slots:
+                items:
+                  - _id: 5a964424-7775-46dc-b90c-3e9419a5e497
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-outfits
+                      slug:
+                        type: text
+                        value: womens-outfits
+                      title:
+                        type: text
+                        value: Outfits
+                  - _id: ee4789cb-0d5f-4067-b8b6-d3fa814291fc
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-clothing-tops
+                      slug:
+                        type: text
+                        value: womens-clothing-tops
+                      title:
+                        type: text
+                        value: Tops
+                  - _id: cb1a50ba-9dec-4188-a22c-996baa703104
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-clothing-dresses
+                      slug:
+                        type: text
+                        value: womens-clothing-dresses
+                      title:
+                        type: text
+                        value: Dresses
+                  - _id: 9ab39cb3-eaf0-46cc-bcf4-30e93bcfca9a
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-clothing-bottoms
+                      slug:
+                        type: text
+                        value: womens-clothing-bottoms
+                      title:
+                        type: text
+                        value: Bottoms
+                  - _id: e6fbbb7f-ad43-4b6c-a4f8-69faa3939a8a
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-clothing-jackets
+                      slug:
+                        type: text
+                        value: womens-clothing-jackets
+                      title:
+                        type: text
+                        value: Jackets & Coats
+                  - _id: 236809a5-f23e-4134-b4c3-264af14cef6f
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-clothing-feeling-red
+                      slug:
+                        type: text
+                        value: womens-clothing-feeling-red
+                      title:
+                        type: text
+                        value: Feeling Red
+              parameters:
+                slug:
+                  type: text
+                  value: womens-clothing
+                title:
+                  type: text
+                  value: Clothing
+            - _id: c99c3c56-8750-4f3a-928a-20c1c5d739eb
+              type: navSectionSimple
+              slots:
+                items:
+                  - _id: 765f28bb-88f2-43f6-8281-9185772647dd
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-jewelry-earrings
+                      slug:
+                        type: text
+                        value: womens-jewelry-earrings
+                      title:
+                        type: text
+                        value: Earrings
+                  - _id: 293ee332-1055-42d0-82c7-6ee52645def3
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-jewelry-bracelets
+                      slug:
+                        type: text
+                        value: womens-jewelry-bracelets
+                      title:
+                        type: text
+                        value: Bracelets
+                  - _id: 2d57195b-716f-4688-b041-a3df4c48ca7a
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-jewelry-necklaces
+                      slug:
+                        type: text
+                        value: womens-jewelry-necklaces
+                      title:
+                        type: text
+                        value: Necklaces
+              parameters:
+                slug:
+                  type: text
+                  value: womens-jewelry
+                title:
+                  type: text
+                  value: Jewelry
+            - _id: ca4762f5-b24a-4013-bb38-46591cb58e95
+              type: navSectionSimple
+              slots:
+                items:
+                  - _id: ecf3f9d9-bde6-424a-bf2e-5c79e3bac8e8
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-accessories-scarves
+                      slug:
+                        type: text
+                        value: womens-accessories-scarves
+                      title:
+                        type: text
+                        value: Scarves
+                  - _id: 3bb061d9-281e-4616-b716-a5089467ae72
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: womens-accessories-shoes
+                      slug:
+                        type: text
+                        value: womens-accessories-shoes
+                      title:
+                        type: text
+                        value: Shoes
+              parameters:
+                slug:
+                  type: text
+                  value: womens-accessories
+                title:
+                  type: text
+                  value: Accessories
+        parameters:
+          slug:
+            type: text
+            value: womens
+          title:
+            type: text
+            value: Womens
+      - _id: 97517a84-5c2a-4d71-87b3-9f00e1047d6b
+        type: navGroupSimple
+        slots:
+          sections:
+            - _id: d3a3deca-e6e1-4783-b384-05a85fd6cabd
+              type: navSectionSimple
+              slots:
+                items:
+                  - _id: 7bc0e0bb-8428-42f2-8122-69293b6b0199
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: mens-clothing-suits
+                      slug:
+                        type: text
+                        value: mens-clothing-suits
+                      title:
+                        type: text
+                        value: Suits
+                  - _id: a35f6cb9-ca55-442e-a4ea-f067cd08b2ca
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: mens-clothing-jackets
+                      slug:
+                        type: text
+                        value: mens-clothing-jackets
+                      title:
+                        type: text
+                        value: Jackets & Coats
+                  - _id: c0fb3b41-0ab4-40d3-b1e4-ac55a5dad7b4
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: mens-clothing-dress-shirts
+                      slug:
+                        type: text
+                        value: mens-clothing-dress-shirts
+                      title:
+                        type: text
+                        value: Dress shirts
+                  - _id: 56e0a2f7-355b-4ca4-8801-66f2d914a47e
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: mens-clothing-shorts
+                      slug:
+                        type: text
+                        value: mens-clothing-shorts
+                      title:
+                        type: text
+                        value: Shorts
+                  - _id: ff550702-e3b7-40cd-8c12-6a999382cc83
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: mens-clothing-pants
+                      slug:
+                        type: text
+                        value: mens-clothing-pants
+                      title:
+                        type: text
+                        value: Pants
+              parameters:
+                slug:
+                  type: text
+                  value: mens-clothing
+                title:
+                  type: text
+                  value: Clothing
+            - _id: 88525c8b-0953-4a77-9418-8fd3d96b93b8
+              type: navSectionSimple
+              slots:
+                items:
+                  - _id: 0ae25c7f-38e1-4a32-84e1-095782e61464
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: mens-accessories-ties
+                      slug:
+                        type: text
+                        value: mens-accessories-ties
+                      title:
+                        type: text
+                        value: Ties
+                  - _id: da761a38-8f4a-4ac6-b9fc-ee46e65f52c7
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: mens-accessories-gloves
+                      slug:
+                        type: text
+                        value: mens-accessories-gloves
+                      title:
+                        type: text
+                        value: Gloves
+                  - _id: f0011e21-18b1-4893-9f2d-743e683c0a0b
+                    type: navItemSimple
+                    parameters:
+                      link:
+                        type: text
+                        value: mens-accessories-luggage
+                      slug:
+                        type: text
+                        value: mens-accessories-luggage
+                      title:
+                        type: text
+                        value: Luggage
+              parameters:
+                slug:
+                  type: text
+                  value: mens-clothing-accessories
+                title:
+                  type: text
+                  value: Accessories
+        parameters:
+          slug:
+            type: text
+            value: mens
+          title:
+            type: text
+            value: Mens
+      - _id: 67b3ff20-c976-43fb-8a13-beb4db8df1a7
+        type: navGroupSimple
+        parameters:
+          slug:
+            type: text
+            value: gift-certificates
+          title:
+            type: text
+            value: Gift Certificates
+      - _id: 08b7500a-89d8-47c2-afcb-d2b794097867
+        type: navGroupSimple
+        parameters:
+          slug:
+            type: text
+            value: top-seller
+          title:
+            type: text
+            value: Top Sellers
+created: '2022-10-21T00:33:27.667734+00:00'
+modified: '2022-12-09T22:41:48.223985+00:00'
+pattern: false

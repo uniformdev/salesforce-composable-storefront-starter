@@ -1,0 +1,9 @@
+id: plpRefinements
+name: PLP Refinements
+icon: filters
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-11-16T11:54:16.873446+00:00'
+updated: '2022-11-16T11:54:16.873446+00:00'

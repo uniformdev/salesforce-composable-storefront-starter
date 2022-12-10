@@ -1,0 +1,71 @@
+composition:
+  _name: 'Womens Clothing: PLP Override'
+  _id: 350073d7-01d1-4ef1-84aa-872b21bf9d85
+  _slug: /category/womens-clothing
+  type: productListingPage
+  parameters: {}
+  slots:
+    top:
+      - _id: 3fe4e49f-030e-44d5-b38f-4c74dc34610e
+        type: callToAction
+        variant: centered
+        parameters:
+          title:
+            type: text
+            value: Just look at this category!
+          linkUrl:
+            type: text
+            value: '#'
+          linkText:
+            type: text
+            value: Buy now
+          subtitle:
+            type: text
+            value: It's beautiful 💗
+      - _id: b2978a15-fbf2-42bb-9cbf-0eb9b1c1bca6
+        type: plpHeader
+        variant: desktop
+      - _id: 7c545d0b-e76f-497b-b75e-48073942a963
+        type: plpHeader
+        variant: mobile
+    main:
+      - _id: 78a7f9cb-20f6-4b2d-a6a6-70f2451af009
+        type: plpListing
+      - _id: d0369bf5-2f81-43bb-a8a1-ff31dc8d52b8
+        type: plpFooter
+    sidebar:
+      - _id: 8e3173b3-b2a4-4203-ad19-f1a5984be446
+        type: plpRefinements
+    editorial:
+      - _id: 06657e00-a48b-4811-9c45-eddda7e57e81
+        type: features
+        slots:
+          features:
+            - _id: edc2b1c2-876b-48ec-a299-a06823172b77
+              type: feature
+              parameters:
+                icon:
+                  type: select
+                  value: Account
+                title:
+                  type: text
+                  value: Some feature
+                description:
+                  type: text
+                  value: Description of the feature
+        parameters:
+          title:
+            type: text
+            value: Features of this category
+          description:
+            type: text
+            value: You'll have to buy after reading this
+    refinementsModal:
+      - _id: 89e830d8-a364-4ae5-9909-50e630de3cc2
+        type: plpRefinements
+    emptySearchResults:
+      - _id: 5d091a0c-df88-439f-bb63-ace7b095bbda
+        type: plpNoResults
+created: '2022-11-16T17:36:33.87567+00:00'
+modified: '2022-12-09T21:42:44.562567+00:00'
+pattern: false

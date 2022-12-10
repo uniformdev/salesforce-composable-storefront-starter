@@ -1,0 +1,15 @@
+id: container
+name: Container
+icon: list-tree
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: modules
+    name: Modules
+    allowedComponents:
+      - callToAction
+      - productRail
+    inheritAllowedComponents: false
+canBeComposition: false
+created: '2022-12-08T14:49:52.716685+00:00'
+updated: '2022-12-08T14:49:52.716685+00:00'

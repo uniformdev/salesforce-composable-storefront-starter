@@ -1,0 +1,31 @@
+composition:
+  _name: PLP Template
+  _id: e6b603fd-17a7-4bb1-9fd2-2fc0729f097f
+  _slug: /plp
+  type: productListingPage
+  parameters: {}
+  slots:
+    top:
+      - _id: efcebcd9-2aee-4149-9f92-20f383037b7d
+        type: plpHeader
+        variant: desktop
+      - _id: bfe6980b-bde5-4c16-aa66-5ee29de68167
+        type: plpHeader
+        variant: mobile
+    main:
+      - _id: c81d9455-c7f8-43c4-9d10-a337a08ba256
+        type: plpListing
+      - _id: 7ed39b15-f9e1-4615-bfd8-5178422c5bc5
+        type: plpFooter
+    sidebar:
+      - _id: 9dd1a28b-7082-4f7e-8db3-6a5f730ba1ff
+        type: plpRefinements
+    refinementsModal:
+      - _id: 465b3767-bf19-4e1f-a216-837cdaa5df98
+        type: plpRefinements
+    emptySearchResults:
+      - _id: 15b1c2db-9fcf-4516-a3e1-f21d35565c20
+        type: plpNoResults
+created: '2022-10-21T00:33:28.60845+00:00'
+modified: '2022-12-09T22:41:58.115701+00:00'
+pattern: false

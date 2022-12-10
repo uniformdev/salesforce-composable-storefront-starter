@@ -1,0 +1,276 @@
+composition:
+  _name: Home
+  _id: e53d4ab7-8d26-4cfb-8a63-c803009fb06b
+  _slug: /
+  type: page
+  parameters:
+    metaTitle:
+      type: text
+      value: Home Page | Retail React App
+  slots:
+    main:
+      - _id: 1f2030b1-2513-4206-b0dc-cdc0b31b9d76
+        type: $personalization
+        slots:
+          pz:
+            - _id: 835a7cb4-e494-434f-b122-f61afffb21c9
+              type: callToAction
+              parameters:
+                image:
+                  type: text
+                  value: static/img/personalized.jpeg
+                title:
+                  type: text
+                  value: You've been personalized
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: 2023Launch
+                        r: 0
+                        op: '>'
+                    name: 'Call to Action: You''ve been personalized'
+                linkUrl:
+                  type: text
+                  value: >-
+                    https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/getting-started.html
+                linkText:
+                  type: text
+                  value: Personalized
+            - _id: 42b234d6-e2c5-42f2-a9d3-bdba4989f4b1
+              type: callToAction
+              variant: image
+              parameters:
+                image:
+                  type: text
+                  value: static/img/hero.png
+                title:
+                  type: text
+                  value: The React PWA Starter Store for Retail
+                linkUrl:
+                  type: text
+                  value: >-
+                    https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/getting-started.html
+                linkText:
+                  type: text
+                  value: Get started
+        parameters:
+          trackingEventName:
+            type: text
+            value: Home CTA
+      - _id: ddd34bda-db4e-4920-a6e0-e7fd3a28afcd
+        type: productRail
+        parameters:
+          text:
+            type: text
+            value: >-
+              This section contains content from the catalog. <a target="_blank"
+              class="chakra-link css-1c262gh"
+              href="https://sfdc.co/business-manager-manage-catalogs">Read
+              docs</a> on how to replace it.
+          title:
+            type: text
+            value: Shop Products
+          products:
+            type: salesforce-cc-product-selector
+            value:
+              value:
+                - id: 25592075M
+                - id: 25518447M
+                - id: 25697499M
+                - id: 25519044M
+                - id: 25629026M
+      - _id: cd774bba-985d-40ee-988f-663133d3366e
+        type: heroFeatures
+        slots:
+          features:
+            - _id: aeed0bb0-00dd-4f7b-a8d5-54dcf1c93a3e
+              type: heroFeature
+              parameters:
+                icon:
+                  type: select
+                  value: FigmaLogo
+                link:
+                  type: text
+                  value: https://sfdc.co/figma-pwa-design-kit
+                message:
+                  type: text
+                  value: Create with the Figma PWA Design Kit
+            - _id: 6c39231f-1e1c-41bc-8674-934d6c373e5f
+              type: heroFeature
+              parameters:
+                icon:
+                  type: select
+                  value: GithubLogo
+                link:
+                  type: text
+                  value: https://github.com/SalesforceCommerceCloud/pwa-kit
+                message:
+                  type: text
+                  value: Download on Github
+            - _id: 534e1c1a-94fb-4f1d-8dab-81fd715465b3
+              type: heroFeature
+              parameters:
+                icon:
+                  type: select
+                  value: BrandLogo
+                link:
+                  type: text
+                  value: >-
+                    https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/pushing-and-deploying-bundles.html
+                message:
+                  type: text
+                  value: Deploy on Managed Runtime
+      - _id: e75d2ab4-94b7-4863-af98-109978bbc82a
+        type: dynamicProductList
+        parameters:
+          title:
+            type: text
+            value: Top seller pants
+          products:
+            type: salesforce-cc-product-query
+            value:
+              sort: top-sellers
+              count: 3
+              keyword: pants
+              category: newarrivals
+      - _id: 72ba1ec0-7201-4002-b286-1c166950e7f4
+        type: productRecommendations
+        parameters:
+          title:
+            type: text
+            value: Products recommended by Salesforce Einstein
+          products:
+            type: salesforce-cc-einstein
+            value:
+              context: {}
+              recommender: products-in-all-categories
+      - _id: 03b76d0f-6f36-43c3-a11e-cfe40b33abc4
+        type: productRecommendations
+        parameters:
+          title:
+            type: text
+            value: Viewed recently
+          products:
+            type: salesforce-cc-einstein
+            value:
+              context: {}
+              recommender: viewed-recently-einstein
+      - _id: 86ca7c6b-07b8-4f19-ab0e-0402ffbc9263
+        type: features
+        slots:
+          features:
+            - _id: d7c49895-c63b-49d9-8846-e20b62c52b38
+              type: feature
+              parameters:
+                icon:
+                  type: select
+                  value: Basket
+                title:
+                  type: text
+                  value: Cart & Checkout
+                description:
+                  type: text
+                  value: >-
+                    Ecommerce best practice for a shopper's cart and checkout
+                    experience.
+            - _id: 9d2cd896-9d1e-4847-955d-b6dcc4b6f223
+              type: feature
+              parameters:
+                icon:
+                  type: select
+                  value: Like
+                title:
+                  type: text
+                  value: Einstein Recommendations
+                description:
+                  type: text
+                  value: >-
+                    Deliver the next best product or offer to every shopper
+                    through product recommendations.
+            - _id: 474b0c81-0bcd-446b-990b-c1f2344e2968
+              type: feature
+              parameters:
+                icon:
+                  type: select
+                  value: Account
+                title:
+                  type: text
+                  value: My Account
+                description:
+                  type: text
+                  value: >-
+                    Shoppers can manage account information such as their
+                    profile, addresses, payments and orders.
+            - _id: b9bbd710-d53f-4103-88b8-ac949f083600
+              type: feature
+              parameters:
+                icon:
+                  type: select
+                  value: Plug
+                title:
+                  type: text
+                  value: Shopper Login and API Access Service
+                description:
+                  type: text
+                  value: >-
+                    Enable shoppers to easily log in with a more personalized
+                    shopping experience.
+            - _id: 5ca7527b-3f79-405c-b4a2-144a857680c3
+              type: feature
+              parameters:
+                icon:
+                  type: select
+                  value: Dashboard
+                title:
+                  type: text
+                  value: Components & Design Kit
+                description:
+                  type: text
+                  value: >-
+                    Built using Chakra UI, a simple, modular and accessible
+                    React component library.
+            - _id: de55af26-6b72-4e6b-9d84-366fa26720a2
+              type: feature
+              parameters:
+                icon:
+                  type: select
+                  value: Heart
+                title:
+                  type: text
+                  value: Wishlist
+                description:
+                  type: text
+                  value: >-
+                    Registered shoppers can add product items to their wishlist
+                    from purchasing later.
+        parameters:
+          title:
+            type: text
+            value: Features
+          description:
+            type: text
+            value: >-
+              Out-of-the-box features so that you focus only on adding
+              enhancements.
+      - _id: 0cb14eb5-d7d8-4849-91c5-4be895dbf52d
+        type: callToAction
+        variant: centered
+        parameters:
+          title:
+            type: text
+            value: We're here to help
+          linkUrl:
+            type: text
+            value: https://help.salesforce.com/s/?language=en_US
+          linkText:
+            type: text
+            value: Contact Us
+          subtitle:
+            type: text
+            value: |-
+              Contact our support staff. <br />
+              They will get you to the right place.
+created: '2022-10-21T00:33:27.734443+00:00'
+modified: '2022-12-10T00:10:01.430206+00:00'
+pattern: false

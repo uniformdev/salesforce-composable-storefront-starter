@@ -1,0 +1,27 @@
+composition:
+  _name: Monthy highlighted products
+  _id: cd85705a-793d-452b-8a1e-27b3331d1d2b
+  type: productRail
+  parameters:
+    text:
+      type: text
+      value: >-
+        This section contains content from the catalog. <a target="_blank"
+        class="chakra-link css-1c262gh"
+        href="https://sfdc.co/business-manager-manage-catalogs">Read docs</a> on
+        how to replace it.
+    title:
+      type: text
+      value: Shop Products
+    products:
+      type: salesforce-cc-product-selector
+      value:
+        value:
+          - id: 25592075M
+          - id: 25518447M
+          - id: 25697499M
+          - id: 25519044M
+          - id: 25629026M
+created: '2022-12-08T14:47:43.383684+00:00'
+modified: '2022-12-08T14:47:43.383684+00:00'
+pattern: true

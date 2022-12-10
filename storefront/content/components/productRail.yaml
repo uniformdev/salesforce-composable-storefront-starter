@@ -1,0 +1,29 @@
+id: productRail
+name: Product Rail
+icon: view-list
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig:
+      required: true
+  - id: text
+    name: Text
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: '6'
+  - id: products
+    name: Products
+    type: salesforce-cc-product-selector
+    helpText: ''
+    typeConfig:
+      variant: false
+      multiple: true
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2022-10-21T00:33:17.483487+00:00'
+updated: '2022-12-09T21:53:56.260838+00:00'

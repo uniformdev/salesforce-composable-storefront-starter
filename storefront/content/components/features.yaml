@@ -1,0 +1,29 @@
+id: features
+name: Features
+icon: view-grid
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '4'
+useTeamPermissions: true
+slots:
+  - id: features
+    name: Features
+    allowedComponents:
+      - feature
+    inheritAllowedComponents: false
+titleParameter: description
+canBeComposition: false
+created: '2022-10-21T00:33:15.279715+00:00'
+updated: '2022-12-09T21:49:35.313824+00:00'

@@ -1,0 +1,14 @@
+id: megaNav
+name: Mega Nav
+icon: menu
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: groups
+    name: Groups
+    allowedComponents:
+      - navGroupSimple
+    inheritAllowedComponents: false
+canBeComposition: true
+created: '2022-10-21T00:33:16.134339+00:00'
+updated: '2022-11-16T11:54:16.257938+00:00'

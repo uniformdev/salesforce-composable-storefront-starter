@@ -1,0 +1,24 @@
+id: pdpRecommendedProducts
+name: PDP Recommended Products
+icon: shopping-cart
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: recommender
+    name: Recommender
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Complete the Set
+          value: complete-the-set
+        - text: Similar items
+          value: pdp-similar-items
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-11-16T17:02:38.519282+00:00'
+updated: '2022-11-16T17:02:38.519282+00:00'

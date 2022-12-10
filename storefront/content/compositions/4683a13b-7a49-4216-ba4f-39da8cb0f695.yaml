@@ -1,0 +1,32 @@
+composition:
+  _name: 'Scoop Neck Tee: PDP Override'
+  _id: 4683a13b-7a49-4216-ba4f-39da8cb0f695
+  _slug: /product/25493613M
+  type: productDetailPage
+  parameters: {}
+  slots:
+    main:
+      - _id: b716cbcb-cfa7-46dd-8381-3dd44225f081
+        type: pdpProductView
+      - _id: c2e4ad5d-2975-4a40-9f9c-afec41550b31
+        type: pdpProductInformation
+    editorial:
+      - _id: 23364c63-d291-4e7e-8028-6a4e68acbdd6
+        type: callToAction
+        variant: centered
+        parameters:
+          title:
+            type: text
+            value: You have to buy this product
+          linkUrl:
+            type: text
+            value: '#'
+          linkText:
+            type: text
+            value: Beautiful!
+          subtitle:
+            type: text
+            value: I mean, just look at it
+created: '2022-11-16T17:29:03.908709+00:00'
+modified: '2022-12-01T14:28:17.6187+00:00'
+pattern: false

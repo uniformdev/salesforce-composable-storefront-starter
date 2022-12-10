@@ -1,0 +1,34 @@
+id: heroFeature
+name: Hero Feature
+icon: awards
+parameters:
+  - id: message
+    name: Message
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: link
+    name: Link
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: icon
+    name: Icon
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: GithubLogo
+          value: GithubLogo
+        - text: BrandLogo
+          value: BrandLogo
+        - text: FigmaLogo
+          value: FigmaLogo
+      required: true
+useTeamPermissions: true
+slots: []
+titleParameter: message
+canBeComposition: false
+created: '2022-10-21T00:33:15.986527+00:00'
+updated: '2022-11-16T11:54:15.706008+00:00'

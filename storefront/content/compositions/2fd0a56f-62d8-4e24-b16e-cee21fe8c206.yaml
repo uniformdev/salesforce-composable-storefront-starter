@@ -1,0 +1,42 @@
+composition:
+  _name: Global monthly products
+  _id: 2fd0a56f-62d8-4e24-b16e-cee21fe8c206
+  type: container
+  parameters: {}
+  slots:
+    modules:
+      - _id: 43d935fd-9a86-4b50-ac67-21d2632a8c4e
+        type: productRail
+        parameters:
+          text:
+            type: text
+            value: Our top pick of the month
+          title:
+            type: text
+            value: December highlighted products
+          products:
+            type: salesforce-cc-product-selector
+            value:
+              value:
+                - id: 25518447M
+                - id: 25697499M
+                - id: 25519044M
+      - _id: 5d979079-89e3-4838-99af-7320d0ebbe03
+        type: callToAction
+        variant: centered
+        parameters:
+          title:
+            type: text
+            value: Learn about our bundles
+          linkUrl:
+            type: text
+            value: /bundles
+          linkText:
+            type: text
+            value: Learn more
+          subtitle:
+            type: text
+            value: We have multiple bundles available
+created: '2022-12-08T14:50:13.799055+00:00'
+modified: '2022-12-08T14:52:15.506216+00:00'
+pattern: true

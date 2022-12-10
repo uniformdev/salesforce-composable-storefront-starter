@@ -1,0 +1,27 @@
+id: navItemSimple
+name: Nav Item Simple
+icon: menu
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: link
+    name: Link
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: slug
+    name: Slug
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2022-10-21T00:33:16.299574+00:00'
+updated: '2022-12-09T22:32:40.266429+00:00'

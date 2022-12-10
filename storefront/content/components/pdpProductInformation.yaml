@@ -1,0 +1,9 @@
+id: pdpProductInformation
+name: PDP Product Information
+icon: list
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-11-16T17:00:39.522359+00:00'
+updated: '2022-11-16T17:00:39.522359+00:00'

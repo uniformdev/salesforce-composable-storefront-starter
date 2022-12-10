@@ -1,0 +1,14 @@
+id: plpHeader
+name: PLP Header
+icon: border-top
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-10-21T00:33:16.623272+00:00'
+updated: '2022-12-09T22:45:45.968157+00:00'
+variants:
+  - id: desktop
+    name: Desktop
+  - id: mobile
+    name: Mobile

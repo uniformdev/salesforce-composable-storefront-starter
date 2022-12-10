@@ -1,0 +1,42 @@
+id: callToAction
+name: Call to Action
+icon: awards
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: subtitle
+    name: Subtitle
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+  - id: image
+    name: Image
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: linkUrl
+    name: Link URL
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: linkText
+    name: Link Text
+    type: text
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2022-10-21T00:33:15.235878+00:00'
+updated: '2022-11-16T11:54:15.090684+00:00'
+variants:
+  - id: image
+    name: Image
+  - id: centered
+    name: Centered

@@ -1,0 +1,45 @@
+composition:
+  _name: PDP
+  _id: f153fa0f-687c-4610-8161-23dfe7292f68
+  _slug: /pdp
+  type: productDetailPage
+  parameters: {}
+  slots:
+    main:
+      - _id: e6aba6ad-a302-448a-b4f1-bc297da1a8f0
+        type: pdpProductView
+      - _id: 64d821cb-8064-428e-9eb7-d8ddb5e30097
+        type: pdpProductInformation
+    editorial:
+      - _id: adc551d3-2045-4f3b-a8e6-6f2ccbd2b10a
+        type: pdpRecommendedProducts
+        parameters:
+          title:
+            type: text
+            value: Complete the Set
+          recommender:
+            type: select
+            value: complete-the-set
+      - _id: 4efb6094-b5cb-4a0b-b86b-fb4613bd70ea
+        type: pdpRecommendedProducts
+        parameters:
+          title:
+            type: text
+            value: You might also like
+          recommender:
+            type: select
+            value: pdp-similar-items
+      - _id: 0f19527a-6e15-47c0-b2f5-72f12211b407
+        type: productRecommendations
+        parameters:
+          title:
+            type: text
+            value: Recently Viewed
+          products:
+            type: salesforce-cc-einstein
+            value:
+              context: {}
+              recommender: viewed-recently-einstein
+created: '2022-11-16T17:12:47.965393+00:00'
+modified: '2022-11-16T17:25:05.354051+00:00'
+pattern: false

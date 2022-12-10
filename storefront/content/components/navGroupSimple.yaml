@@ -1,0 +1,27 @@
+id: navGroupSimple
+name: Nav Group Simple
+icon: menu
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: slug
+    name: Slug
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+useTeamPermissions: true
+slots:
+  - id: sections
+    name: Sections
+    allowedComponents:
+      - navSectionSimple
+    inheritAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2022-10-21T00:33:16.619417+00:00'
+updated: '2022-11-16T11:54:16.2603+00:00'

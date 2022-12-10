@@ -1,0 +1,68 @@
+id: page
+name: Page
+icon: file-document
+parameters:
+  - id: metaTitle
+    name: Meta Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: metaDescription
+    name: Meta Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+useTeamPermissions: true
+slots:
+  - id: main
+    name: Main
+    allowedComponents:
+      - productRail
+      - offers
+      - productCategory
+      - productDetail
+      - promoSection
+      - featuredProduct
+      - productHero
+      - dynamicProductList
+      - productRecommendations
+      - $personalization
+      - $localization
+      - $test
+      - productListFromIndex
+      - featuredProductFromIndex
+      - algoliaInstantSearch
+      - heroSfcms
+      - callToAction
+      - heroFeatures
+      - features
+    inheritAllowedComponents: false
+defaults:
+  type: page
+  slots:
+    footer:
+      - type: footer
+    header:
+      - type: storeNavigation
+        slots:
+          topStoreNav:
+            - type: announcementBar
+              variant: ''
+              parameters:
+                entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 1SaVGBiAo2c097JwxECpPx
+        _pattern: 3c93a874-da1d-434a-b188-ba0ac51e4fbd
+slugSettings:
+  unique: global
+  required: 'yes'
+  regularExpression: ''
+  regularExpressionMessage: ''
+titleParameter: metaTitle
+canBeComposition: true
+created: '2022-10-21T00:33:16.414054+00:00'
+updated: '2022-12-10T00:08:07.219253+00:00'
