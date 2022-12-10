@@ -22,6 +22,7 @@
     "@uniformdev/canvas-contentful": "17.6.0",
     "@uniformdev/canvas-salesforce-commerce-cloud": "17.1.1-alpha.23",
     "@uniformdev/context": "17.6.0",
+    "commerce-sdk": "^2.10.0",
     "contentful": "^9.1.34",
     "next": "13.0.6",
     "nextjs-cors": "^2.1.2",
