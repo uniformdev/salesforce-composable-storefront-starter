@@ -1,31 +1,30 @@
 import React from 'react'
-import {ComponentProps} from '@uniformdev/canvas-react'
 import {Button, Link} from '@chakra-ui/react'
 import Section from '../../section'
+import {CallToActionProps} from './CallToActionProps'
 
-type CallToActionCenteredProps = ComponentProps<{
-    title: string
-    subtitle: string
-    linkUrl: string
-    linkText: string
-}>
-
-const CallToActionCentered = ({title, subtitle, linkUrl, linkText}: CallToActionCenteredProps) => (
+const CallToActionCentered: React.FC<CallToActionProps> = ({
+    title,
+    subtitle,
+    linkUrl,
+    linkText,
+    content
+}) => (
     <Section
         padding={4}
         paddingTop={32}
-        title={title}
-        subtitle={<span dangerouslySetInnerHTML={{__html: subtitle}}></span>}
+        title={title || content.title}
+        subtitle={<span dangerouslySetInnerHTML={{__html: subtitle || content.subtitle}}></span>}
         actions={
             <Button
                 as={Link}
-                href={linkUrl}
+                href={linkUrl || content.linkUrl}
                 target="_blank"
                 width={'auto'}
                 paddingX={7}
                 _hover={{textDecoration: 'none'}}
             >
-                {linkText}
+                {linkText || content.linkText}
             </Button>
         }
         maxWidth={'xl'}
