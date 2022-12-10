@@ -17,11 +17,26 @@ composition:
               type: callToAction
               parameters:
                 image:
-                  type: text
-                  value: static/img/personalized.jpeg
-                title:
-                  type: text
-                  value: You've been personalized
+                  type: cloudinary-media-selector
+                  value:
+                    - alt: ''
+                      url: >-
+                        https://res.cloudinary.com/uniformdev/image/upload/v1670714984/SFCSF/personalized_weytyb.jpg
+                      ratio: ''
+                      width: '874'
+                      format: jpg
+                      height: '580'
+                      widths: ''
+                      caption: ''
+                      options: ''
+                      version: 1670714984
+                      publicId: SFCSF/personalized_weytyb
+                      createdAt: '2022-12-10T23:29:44Z'
+                      previewUrl: >-
+                        https://res.cloudinary.com/uniformdev/image/upload/q_auto:low,f_auto,w_150/SFCSF/personalized_weytyb.jpg
+                      resourceType: image
+                      transformation: ''
+                      globalImageOptions: ''
                 $pzCrit:
                   type: $pzCrit
                   value:
@@ -30,30 +45,41 @@ composition:
                         r: 0
                         op: '>'
                     name: 'Call to Action: You''ve been personalized'
-                linkUrl:
-                  type: text
-                  value: >-
-                    https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/getting-started.html
-                linkText:
-                  type: text
-                  value: Personalized
+                content:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 2E9Buww86RN1qQWWH0PkIA
             - _id: 42b234d6-e2c5-42f2-a9d3-bdba4989f4b1
               type: callToAction
               variant: image
               parameters:
                 image:
-                  type: text
-                  value: static/img/hero.png
-                title:
-                  type: text
-                  value: The React PWA Starter Store for Retail
-                linkUrl:
-                  type: text
-                  value: >-
-                    https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/getting-started.html
-                linkText:
-                  type: text
-                  value: Get started
+                  type: cloudinary-media-selector
+                  value:
+                    - alt: ''
+                      url: >-
+                        https://res.cloudinary.com/uniformdev/image/upload/v1670714984/SFCSF/hero_xndkcw.png
+                      ratio: ''
+                      width: '1284'
+                      format: png
+                      height: '928'
+                      widths: ''
+                      caption: ''
+                      options: ''
+                      version: 1670714984
+                      publicId: SFCSF/hero_xndkcw
+                      createdAt: '2022-12-10T23:29:44Z'
+                      previewUrl: >-
+                        https://res.cloudinary.com/uniformdev/image/upload/q_auto:low,f_auto,w_150/SFCSF/hero_xndkcw.png
+                      resourceType: image
+                      transformation: ''
+                      globalImageOptions: ''
+                content:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 38QG7KD09xxQdr9SQYFkcx
         parameters:
           trackingEventName:
             type: text
@@ -257,20 +283,11 @@ composition:
         type: callToAction
         variant: centered
         parameters:
-          title:
-            type: text
-            value: We're here to help
-          linkUrl:
-            type: text
-            value: https://help.salesforce.com/s/?language=en_US
-          linkText:
-            type: text
-            value: Contact Us
-          subtitle:
-            type: text
-            value: |-
-              Contact our support staff. <br />
-              They will get you to the right place.
-created: '2022-10-21T00:33:27.734443+00:00'
-modified: '2022-12-10T00:10:01.430206+00:00'
+          content:
+            type: contentfulEntry
+            value:
+              source: default
+              entryId: 68V10VPraOqW4glHYnkS7r
+created: '2022-12-10T00:02:38.01688+00:00'
+modified: '2022-12-10T23:37:08.454155+00:00'
 pattern: false

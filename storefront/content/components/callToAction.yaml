@@ -2,39 +2,31 @@ id: callToAction
 name: Call to Action
 icon: awards
 parameters:
-  - id: title
-    name: Title
-    type: text
-    helpText: ''
-    typeConfig:
-      required: true
-  - id: subtitle
-    name: Subtitle
-    type: text
-    helpText: ''
-    typeConfig:
-      multiline: true
   - id: image
     name: Image
-    type: text
+    type: cloudinary-media-selector
     helpText: ''
-    typeConfig: null
-  - id: linkUrl
-    name: Link URL
-    type: text
+    typeConfig:
+      ratio: ''
+      widths: ''
+      multiSelect: false
+      defaultoptions: ''
+  - id: content
+    name: Content
+    type: contentfulEntry
     helpText: ''
-    typeConfig: null
-  - id: linkText
-    name: Link Text
-    type: text
-    helpText: ''
-    typeConfig: null
+    typeConfig:
+      source: default
+      allowedContentTypes:
+        callToAction:
+          id: callToAction
+          name: Call to Action
 useTeamPermissions: true
 slots: []
-titleParameter: title
+titleParameter: content
 canBeComposition: false
-created: '2022-10-21T00:33:15.235878+00:00'
-updated: '2022-11-16T11:54:15.090684+00:00'
+created: '2022-12-10T00:02:34.414904+00:00'
+updated: '2022-12-10T23:36:16.45506+00:00'
 variants:
   - id: image
     name: Image
