@@ -13,18 +13,18 @@ const CallToActionCentered: React.FC<CallToActionProps> = ({
     <Section
         padding={4}
         paddingTop={32}
-        title={title || content.title}
-        subtitle={<span dangerouslySetInnerHTML={{__html: subtitle || content.subtitle}}></span>}
+        title={title || content?.title}
+        subtitle={<span dangerouslySetInnerHTML={{__html: subtitle || content?.subtitle}}></span>}
         actions={
             <Button
                 as={Link}
-                href={linkUrl || content.linkUrl}
+                href={linkUrl || content?.linkUrl}
                 target="_blank"
                 width={'auto'}
                 paddingX={7}
                 _hover={{textDecoration: 'none'}}
             >
-                {linkText || content.linkText}
+                {linkText || content?.linkText}
             </Button>
         }
         maxWidth={'xl'}
