@@ -87,4 +87,9 @@ This repo consists of two parts:
     }
     ```
 
+1. Add this proxy to Proxy Configs in Managed Runtime:
+    - Path: `uniform`
+    - Protocol: `https`
+    - Host: `sfcsfproxy.uniform.app`
+
 1. Then you can deploy the Storefront as described in [this documentation](https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/pushing-and-deploying-bundles.html?q=push).

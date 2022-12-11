@@ -40,11 +40,15 @@ function getImageUrl(image) {
     if (!image) {
         return ''
     }
+
+    // image string coming from Canvas
+    if (typeof image === 'string' || image instanceof String) {
+        // if external image, return as is
+        // otherwise run it via getAssetUrl helper to get a proper link
+        return image?.startsWith('http') ? image : getAssetUrl(image)
+    }
+
     return image?.src
-        ? image.src
-        : typeof image === 'string' || (image instanceof String && image?.startsWith('http'))
-        ? image
-        : getAssetUrl(image)
 }
 
 export default CallToActionImage
