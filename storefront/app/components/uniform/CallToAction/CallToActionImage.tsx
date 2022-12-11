@@ -11,11 +11,10 @@ const CallToActionImage: React.FC<CallToActionProps> = ({
     linkUrl,
     linkText
 }) => {
-    const imageUrl = image?.src ? image.src : image?.startsWith('http') ? image : getAssetUrl(image)
     return (
         <Hero
             img={{
-                src: imageUrl,
+                src: getImageUrl(image),
                 alt: title
             }}
             title={title || content?.title}
@@ -35,6 +34,17 @@ const CallToActionImage: React.FC<CallToActionProps> = ({
             }
         />
     )
+}
+
+function getImageUrl(image) {
+    if (!image) {
+        return ''
+    }
+    return image?.src
+        ? image.src
+        : typeof image === 'string' || (image instanceof String && image?.startsWith('http'))
+        ? image
+        : getAssetUrl(image)
 }
 
 export default CallToActionImage
