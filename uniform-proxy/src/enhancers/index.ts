@@ -20,6 +20,10 @@ import {
 } from "@uniformdev/canvas-cloudinary";
 import { cloudinaryModelConverter } from "./converters/cloudinaryModelConverter";
 
+import { ALGOLIA_PARAMETER_TYPES } from "@uniformdev/canvas-algolia";
+import { algoliaConfigured, algoliaEnhancer } from "./algolia/algoliaEnhancer";
+import { algoliaConverter } from "./converters/algoliaConverter";
+
 const nullEnhancer = () => {
   console.log("WARN: null enhancer called");
 };
@@ -71,5 +75,11 @@ export const getEnhancers = (
     .parameterType(
       CLOUDINARY_PARAMETER_TYPES,
       compose(createCloudinaryEnhancer(), cloudinaryModelConverter)
+    )
+    .parameterType(
+      "algolia-record",
+      algoliaConfigured
+        ? compose(algoliaEnhancer(), algoliaConverter)
+        : nullEnhancer
     );
 };
