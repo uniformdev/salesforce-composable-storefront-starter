@@ -77,7 +77,7 @@ export const getEnhancers = (
       compose(createCloudinaryEnhancer(), cloudinaryModelConverter)
     )
     .parameterType(
-      "algolia-record",
+      ALGOLIA_PARAMETER_TYPES,
       algoliaConfigured
         ? compose(algoliaEnhancer(), algoliaConverter)
         : nullEnhancer

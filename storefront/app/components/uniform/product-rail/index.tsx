@@ -22,11 +22,11 @@ type Product = {
 type ProductRailProps = ComponentProps<{
     title: string
     text?: string
-    products: Array<Product>
+    content: Array<Product>
 }>
 
-const ProductRail = ({title, text, products}: ProductRailProps) => {
-    if (!products || !Array.isArray(products)) {
+const ProductRail = ({title, text, content}: ProductRailProps) => {
+    if (!content || !Array.isArray(content)) {
         return <h1>No products</h1>
     }
     return (
@@ -38,12 +38,12 @@ const ProductRail = ({title, text, products}: ProductRailProps) => {
         >
             <Stack pt={8} spacing={16}>
                 <ProductScroller
-                    products={products?.map((p) => ({
+                    products={content?.map((p) => ({
                         currency: p.currency,
                         image: {
-                            alt: p?.images[0].alt,
-                            disBaseLink: '',
-                            link: p?.images[0].src
+                            alt: p?.image?.alt,
+                            disBaseLink: p?.image?.disBaseLink,
+                            link: p?.image?.disBaseLink
                         },
                         price: p.price,
                         name: p.name,
