@@ -76,13 +76,6 @@ const App = (props) => {
         navComposition
     } = props
 
-    const {composition: currentNavComposition} = useContextualEditing({
-        initialCompositionValue: navComposition,
-        enhance: createApiEnhancer({
-            apiUrl: `/mobify/proxy/uniform/api/enhance`
-        })
-    })
-
     const appOrigin = getAppOrigin()
 
     const history = useHistory()
@@ -245,14 +238,12 @@ const App = (props) => {
                                                     onLogoClick={onLogoClick}
                                                     root={allCategories[DEFAULT_ROOT_CATEGORY]}
                                                     locale={locale}
-                                                    navComposition={currentNavComposition}
+                                                    navComposition={navComposition}
                                                 />
                                             </HideOnDesktop>
 
                                             <HideOnMobile>
-                                                <UniformListMenu
-                                                    navComposition={currentNavComposition}
-                                                />
+                                                <UniformListMenu navComposition={navComposition} />
                                             </HideOnMobile>
                                         </Header>
                                     ) : (

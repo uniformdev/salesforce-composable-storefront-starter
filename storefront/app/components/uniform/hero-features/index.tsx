@@ -1,6 +1,6 @@
 import React from 'react'
 import {Box, SimpleGrid, HStack, Text, Flex, Link} from '@chakra-ui/react'
-import {ComponentProps, Slot} from '@uniformdev/canvas-react'
+import {ComponentProps, UniformSlot} from '@uniformdev/canvas-react'
 import Section from '../../section'
 import {BrandLogo, FigmaLogo, GithubLogo, HeartIcon} from '../../icons'
 
@@ -30,7 +30,7 @@ const HeroFeatures = () => {
                 spacingX={{base: 1, md: 4}}
                 spacingY={{base: 4, md: 14}}
             >
-                <Slot name="features" />
+                <UniformSlot name="features" />
             </SimpleGrid>
         </Section>
     )

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {ComponentProps, Slot} from '@uniformdev/canvas-react'
+import {ComponentProps, UniformSlot} from '@uniformdev/canvas-react'
 import {Box, Heading, List, useMultiStyleConfig} from '@chakra-ui/react'
 import {categoryUrlBuilder} from '../../../utils/url'
 import Link from '../../link'
@@ -42,7 +42,7 @@ const NavSectionSimple = ({title, slug, component}: NavSectionSimpleProps) => {
                 ))}
             {component?.slots?.items && (
                 <List spacing={5}>
-                    <Slot name="items" />
+                    <UniformSlot name="items" />
                 </List>
             )}
         </Box>

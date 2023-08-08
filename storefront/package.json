@@ -8,7 +8,7 @@
         "npm": "^6.14.4 || ^7.0.0 || ^8.0.0"
     },
     "devDependencies": {
-        "@uniformdev/cli": "17.6.0",
+        "@uniformdev/cli": "19.38.2",
         "@chakra-ui/icons": "^1.0.6",
         "@chakra-ui/react": "^1.7.1",
         "@chakra-ui/skip-nav": "^1.1.4",
@@ -117,11 +117,11 @@
         "last 4 ChromeAndroid versions"
     ],
     "dependencies": {
-        "@uniformdev/canvas": "17.6.0",
-        "@uniformdev/canvas-react": "17.6.0",
-        "@uniformdev/context": "17.6.0",
-        "@uniformdev/context-react": "17.6.0",
-        "@uniformdev/project-map": "17.6.0",
+        "@uniformdev/canvas": "19.38.2",
+        "@uniformdev/canvas-react": "19.38.2",
+        "@uniformdev/context": "19.38.2",
+        "@uniformdev/context-react": "19.38.2",
+        "@uniformdev/project-map": "19.38.2",
         "dotenv": "^16.0.3"
     }
 }

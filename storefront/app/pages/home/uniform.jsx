@@ -7,7 +7,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Composition, createApiEnhancer, Slot, useContextualEditing} from '@uniformdev/canvas-react'
+import {UniformComposition, createUniformApiEnhancer, UniformSlot} from '@uniformdev/canvas-react'
 
 import {Box} from '@chakra-ui/react'
 import {getCompositionBySlug} from '../../utils/uniform/canvasClient'
@@ -21,11 +21,8 @@ import {
 } from '../../constants'
 
 const HomeWithComposition = ({composition}) => {
-    const {composition: currentComposition} = useContextualEditing({
-        initialCompositionValue: composition,
-        enhance: createApiEnhancer({
-            apiUrl: `/mobify/proxy/uniform/api/enhance`
-        })
+    const enhance = createUniformApiEnhancer({
+        apiUrl: `/mobify/proxy/uniform/api/enhance`
     })
 
     return (
@@ -35,10 +32,14 @@ const HomeWithComposition = ({composition}) => {
                 description="Commerce Cloud Retail React App"
                 keywords="Commerce Cloud, Retail React App, React Storefront"
             />
-            {currentComposition && (
-                <Composition data={currentComposition} resolveRenderer={composableComponents}>
-                    <Slot name="main" />
-                </Composition>
+            {composition && (
+                <UniformComposition
+                    contextualEditingEnhancer={enhance}
+                    data={composition}
+                    resolveRenderer={composableComponents}
+                >
+                    <UniformSlot name="main" />
+                </UniformComposition>
             )}
         </Box>
     )

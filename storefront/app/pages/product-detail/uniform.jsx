@@ -37,16 +37,13 @@ import {rebuildPathWithParams} from '../../utils/url'
 import {useHistory} from 'react-router-dom'
 import {useToast} from '../../hooks/use-toast'
 import {getCompositionBySlug} from '../../utils/uniform/canvasClient'
-import {Composition, createApiEnhancer, Slot, useContextualEditing} from '@uniformdev/canvas-react'
+import {UniformComposition, UniformSlot, createUniformApiEnhancer} from '@uniformdev/canvas-react'
 import {PDPContext} from '../../components/uniform/pdp-context'
 import {useAutoCategoryEnrichment} from '../../hooks/use-auto-category-enrichment'
 
 const UniformProductDetailWithComposition = ({category, product, isLoading, composition}) => {
-    const {composition: currentComposition} = useContextualEditing({
-        initialCompositionValue: composition,
-        enhance: createApiEnhancer({
-            apiUrl: `/mobify/proxy/uniform/api/enhance`
-        })
+    const enhance = createUniformApiEnhancer({
+        apiUrl: `/mobify/proxy/uniform/api/enhance`
     })
 
     const {formatMessage} = useIntl()
@@ -156,7 +153,11 @@ const UniformProductDetailWithComposition = ({category, product, isLoading, comp
                 isLoading
             }}
         >
-            <Composition data={currentComposition} resolveRenderer={composableComponents}>
+            <UniformComposition
+                data={composition}
+                enhance={enhance}
+                resolveRenderer={composableComponents}
+            >
                 <Box
                     className="sf-product-detail-page"
                     layerStyle="page"
@@ -168,14 +169,14 @@ const UniformProductDetailWithComposition = ({category, product, isLoading, comp
                     </Helmet>
 
                     <Stack spacing={16}>
-                        <Slot name="main" />
+                        <UniformSlot name="main" />
 
                         <Stack spacing={16}>
-                            <Slot name="editorial" />
+                            <UniformSlot name="editorial" />
                         </Stack>
                     </Stack>
                 </Box>
-            </Composition>
+            </UniformComposition>
         </PDPContext.Provider>
     )
 }

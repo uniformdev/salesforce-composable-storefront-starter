@@ -1,4 +1,4 @@
-import {ComponentProps, Slot} from '@uniformdev/canvas-react'
+import {ComponentProps, UniformSlot} from '@uniformdev/canvas-react'
 import {SimpleGrid, HStack, VStack, Text, Flex, Container} from '@chakra-ui/react'
 import Section from '../../../components/section'
 import * as React from 'react'
@@ -28,7 +28,7 @@ const Features = ({title, description}: FeaturesProps) => (
     <Section padding={4} paddingTop={32} title={title} subtitle={description}>
         <Container maxW={'6xl'} marginTop={10}>
             <SimpleGrid columns={{base: 1, md: 2, lg: 3}} spacing={10}>
-                <Slot name="features" />
+                <UniformSlot name="features" />
             </SimpleGrid>
         </Container>
     </Section>

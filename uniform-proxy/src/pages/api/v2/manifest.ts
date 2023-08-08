@@ -7,11 +7,7 @@ import { ManifestClient } from "@uniformdev/context/api";
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { serverRuntimeConfig } = getConfig();
-    const {
-      upstreamHost,
-      apiKey,
-      projectId: projectIdEnvVar,
-    } = serverRuntimeConfig;
+    const { apiKey, projectId: projectIdEnvVar } = serverRuntimeConfig;
 
     await NextCors(req, res, corsConfig);
 
@@ -27,7 +23,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     const manifestClient = new ManifestClient({
       apiKey,
-      apiHost: upstreamHost,
       projectId: projectId as string,
     });
 

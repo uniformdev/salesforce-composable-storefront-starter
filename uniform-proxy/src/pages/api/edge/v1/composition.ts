@@ -12,11 +12,7 @@ import { getEnhancers } from "@/enhancers";
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { serverRuntimeConfig } = getConfig();
-    const {
-      upstreamHost,
-      apiKey,
-      projectId: projectIdEnvVar,
-    } = serverRuntimeConfig;
+    const { apiKey, projectId: projectIdEnvVar } = serverRuntimeConfig;
 
     await NextCors(req, res, corsConfig);
 
@@ -61,7 +57,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     const canvasClient = new CanvasClient({
       apiKey: apiKey,
-      apiHost: upstreamHost,
       projectId: projectId as string,
     });
 
@@ -71,18 +66,16 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ? await canvasClient.getCompositionById({
           compositionId: compositionId as string,
           state: stateNum,
-          unstable_resolveData: true,
         })
-      : await canvasClient.unstable_getCompositionByNodePath({
+      : await canvasClient.getCompositionByNodePath({
           projectMapId: projectMapId as string,
           projectMapNodePath: projectMapNodePath as string,
           state: stateNum,
-          unstable_resolveData: true,
         });
 
     if (!composition) {
       return res.status(404).json({
-        message: "Composition not found",
+        message: "UniformComposition not found",
       });
     }
 

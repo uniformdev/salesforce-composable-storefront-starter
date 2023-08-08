@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {ComponentProps, Slot} from '@uniformdev/canvas-react'
+import {ComponentProps, UniformSlot} from '@uniformdev/canvas-react'
 import {
     Accordion,
     AccordionButton,
@@ -69,7 +69,7 @@ const NavGroupSimple = ({title, slug, component}: NavGroupSimpleProps) => {
                                         </AccordionButton>
                                     </h2>
                                 </AccordionItem>
-                                <Slot name="sections" />
+                                <UniformSlot name="sections" />
                             </Accordion>
                         </AccordionPanel>
                     )}

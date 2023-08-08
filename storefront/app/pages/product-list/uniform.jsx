@@ -58,7 +58,7 @@ import {
 import useNavigation from '../../hooks/use-navigation'
 import LoadingSpinner from '../../components/loading-spinner'
 import {getCompositionBySlug} from '../../utils/uniform/canvasClient'
-import {Composition, createApiEnhancer, Slot, useContextualEditing} from '@uniformdev/canvas-react'
+import {UniformComposition, createUniformApiEnhancer, UniformSlot} from '@uniformdev/canvas-react'
 import composableComponents from '../../components/uniform/uniform-composable-components'
 import {PLPContext} from '../../components/uniform/plp-context'
 import {useAutoCategoryEnrichment} from '../../hooks/use-auto-category-enrichment'
@@ -84,13 +84,9 @@ const UniformProductListWithComposition = (props) => {
         ...rest
     } = props
 
-    const {composition: currentComposition} = useContextualEditing({
-        initialCompositionValue: composition,
-        enhance: createApiEnhancer({
-            apiUrl: `/mobify/proxy/uniform/api/enhance`
-        })
+    const enhance = createUniformApiEnhancer({
+        apiUrl: `/mobify/proxy/uniform/api/enhance`
     })
-
     const {total, sortingOptions} = productSearchResult || {}
 
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -275,20 +271,24 @@ const UniformProductListWithComposition = (props) => {
                     DEFAULT_LIMIT_VALUES
                 }}
             >
-                <Composition data={currentComposition} resolveRenderer={composableComponents}>
+                <UniformComposition
+                    data={composition}
+                    enhance={enhance}
+                    resolveRenderer={composableComponents}
+                >
                     {showNoResults ? (
                         <>
-                            <Slot name="emptySearchResults" />
+                            <UniformSlot name="emptySearchResults" />
                         </>
                     ) : (
                         <>
-                            <Slot name="top" />
+                            <UniformSlot name="top" />
                             <Grid templateColumns={{base: '1fr', md: '280px 1fr'}} columnGap={6}>
                                 <Stack display={{base: 'none', md: 'flex'}}>
-                                    <Slot name="sidebar" />
+                                    <UniformSlot name="sidebar" />
                                 </Stack>
                                 <Box>
-                                    <Slot name="main" />
+                                    <UniformSlot name="main" />
                                 </Box>
                             </Grid>
                         </>
@@ -313,7 +313,7 @@ const UniformProductListWithComposition = (props) => {
                             <ModalCloseButton />
                             <ModalBody py={4}>
                                 {filtersLoading && <LoadingSpinner />}
-                                <Slot name="refinementsModal" />
+                                <UniformSlot name="refinementsModal" />
                             </ModalBody>
 
                             <ModalFooter
@@ -351,9 +351,9 @@ const UniformProductListWithComposition = (props) => {
                         </ModalContent>
                     </Modal>
                     <Stack spacing={16}>
-                        <Slot name="editorial" />
+                        <UniformSlot name="editorial" />
                     </Stack>
-                </Composition>
+                </UniformComposition>
             </PLPContext.Provider>
             <Drawer
                 placement="bottom"

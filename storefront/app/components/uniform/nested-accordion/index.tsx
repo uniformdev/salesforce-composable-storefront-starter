@@ -9,7 +9,7 @@ import * as React from 'react'
 // Components
 import {Accordion} from '@chakra-ui/react'
 import {RootComponentInstance} from '@uniformdev/canvas'
-import {Composition, DefaultNotImplementedComponent, Slot} from '@uniformdev/canvas-react'
+import {UniformComposition, DefaultNotImplementedComponent, UniformSlot} from '@uniformdev/canvas-react'
 import NavGroupSimple from './nav-group-simple'
 import NavSectionSimple from './nav-section-simple'
 import NavItemSimple from './nav-item-simple'
@@ -33,13 +33,13 @@ const UniformNestedAccordion = (props: UniformNestedAccordionProps) => {
 
     return (
         <Accordion className="sf-nested-accordion" allowToggle={true} {...rest}>
-            <Composition
+            <UniformComposition
                 data={navComposition}
                 resolveRenderer={resolveRenderer}
                 behaviorTracking={'onLoad'}
             >
-                <Slot name="groups" />
-            </Composition>
+                <UniformSlot name="groups" />
+            </UniformComposition>
         </Accordion>
     )
 }

@@ -10,7 +10,7 @@ import {
     useDisclosure,
     useTheme
 } from '@chakra-ui/react'
-import {ComponentProps, Slot} from '@uniformdev/canvas-react'
+import {ComponentProps, UniformSlot} from '@uniformdev/canvas-react'
 import ListMenuTrigger from './list-menu-trigger'
 import {NavItemProps} from './index'
 
@@ -63,7 +63,7 @@ const NavGroupSimple = ({title, slug, component, maxColumns}: NavGroupSimpleProp
                                     }, minmax(0, 21%))`}
                                     marginInlineStart={{lg: '68px', xl: '96px'}}
                                 >
-                                    <Slot name="sections" />
+                                    <UniformSlot name="sections" />
                                 </SimpleGrid>
                             </Container>
                         </PopoverBody>
