@@ -66,16 +66,6 @@ const UniformProductDetailWithComposition = ({category, product, isLoading, comp
         }
     }, [category])
 
-    /**************** Product Variant ****************/
-    useEffect(() => {
-        // update the variation attributes parameter on
-        // the url accordingly as the variant changes
-        const updatedUrl = rebuildPathWithParams(`${location.pathname}${location.search}`, {
-            pid: variant?.productId
-        })
-        history.replace(updatedUrl)
-    }, [variant])
-
     /**************** Wishlist ****************/
     const wishlist = useWishlist()
     // TODO: DRY this handler when intl provider is available globally
