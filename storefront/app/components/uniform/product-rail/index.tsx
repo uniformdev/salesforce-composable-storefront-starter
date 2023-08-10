@@ -17,6 +17,7 @@ type Product = {
     price: string
     currency: string
     images: Array<Image>
+    imageGroups: Array<any>
 }
 
 type ProductRailProps = ComponentProps<{
@@ -29,6 +30,24 @@ const ProductRail = ({title, text, products}: ProductRailProps) => {
     if (!products || !Array.isArray(products)) {
         return <h1>No products</h1>
     }
+    const getProductImage = (product: Product) => {
+        if (product.images && Array.isArray(product.images) && product.images.length > 0) {
+            return {
+                alt: product.images[0].alt,
+                disBaseLink: '',
+                link: product.images[0].src
+            }
+        } else if (
+            product.imageGroups &&
+            Array.isArray(product.imageGroups) &&
+            product.imageGroups.length > 0
+        ) {
+            const image = product?.imageGroups?.filter((g) => g.viewType === 'large')[0].images[0]
+            console.log({image})
+            return image
+        }
+    }
+
     return (
         <Section
             padding={4}
@@ -40,11 +59,7 @@ const ProductRail = ({title, text, products}: ProductRailProps) => {
                 <ProductScroller
                     products={products?.map((p) => ({
                         currency: p.currency,
-                        image: {
-                            alt: p?.images[0].alt,
-                            disBaseLink: '',
-                            link: p?.images[0].src
-                        },
+                        image: getProductImage(p),
                         price: p.price,
                         name: p.name,
                         productName: p.name,
