@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button, Link} from '@chakra-ui/react'
+import {UniformText} from '@uniformdev/canvas-react'
 import Section from '../../section'
 import {CallToActionProps} from './CallToActionProps'
 
@@ -13,8 +14,14 @@ const CallToActionCentered: React.FC<CallToActionProps> = ({
     <Section
         padding={4}
         paddingTop={32}
-        title={title || content?.title}
-        subtitle={<span dangerouslySetInnerHTML={{__html: subtitle || content?.subtitle}}></span>}
+        title={title ? <UniformText parameterId="title" /> : content?.title}
+        subtitle={
+            subtitle ? (
+                <UniformText parameterId="subtitle" />
+            ) : (
+                <span dangerouslySetInnerHTML={{__html: content?.subtitle}}></span>
+            )
+        }
         actions={
             <Button
                 as={Link}
@@ -24,7 +31,7 @@ const CallToActionCentered: React.FC<CallToActionProps> = ({
                 paddingX={7}
                 _hover={{textDecoration: 'none'}}
             >
-                {linkText || content?.linkText}
+                {linkText ? <UniformText parameterId="linkText" /> : content?.linkText}
             </Button>
         }
         maxWidth={'xl'}

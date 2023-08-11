@@ -1,6 +1,6 @@
 import React from 'react'
 import {Box, SimpleGrid, HStack, Text, Flex, Link} from '@chakra-ui/react'
-import {ComponentProps, UniformSlot} from '@uniformdev/canvas-react'
+import {ComponentProps, UniformSlot, UniformText } from '@uniformdev/canvas-react'
 import Section from '../../section'
 import {BrandLogo, FigmaLogo, GithubLogo, HeartIcon} from '../../icons'
 
@@ -53,7 +53,9 @@ export const HeroFeature = ({link, icon, message}: HeroFeatureProps) => (
                         <HeartIcon width={12} height={8} />
                     )}
                 </Flex>
-                <Text fontWeight="700"> {message}</Text>
+                <Text fontWeight="700">
+                    <UniformText parameterId="message" />
+                </Text>
             </HStack>
         </Link>
     </Box>
